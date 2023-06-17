@@ -11,7 +11,7 @@ export class Joint {
     constructor(length, jointObject) {
         this.length = length;
         this.jointObject = jointObject;
-
+        this.jointObject.children[0].material = new THREE.MeshStandardMaterial({ color: 0xcfcfcf, metalness: 0.5, roughness: 0.5, side: THREE.DoubleSide});
         //Helper object to get the world position at the end of the joint
         this.jointEndObject = new THREE.Mesh();
         this.jointEndObject.visible = false;
